@@ -49,7 +49,9 @@ start:
   int 21h
   
     
-  cmp bl, 'y' ; check if user wants to continue
+  cmp bl, 'y' ; check if user wants to continue '
+  je start
+  cmp bl,'Y'
   je start ; repeat if 'y' or 'Y'
   
   
